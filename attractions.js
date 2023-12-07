@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import './partials/footer';
-import './partials/Header'
+import './partials/Header';
+import axios from 'axios';
 
  class Attractions extends Component {
   constructor(props){
     super(props);
+
+    this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeDescription = this.onChangeDescription.bind(this);
+    this.onChangeDuration = this.onChangeDuration.bind(this);
+    this.onChangeDate = this.onChangeDate.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    
     this.state={
       attractions:[]
     }
